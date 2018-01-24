@@ -1,0 +1,16 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+
+
+/packages
+/TZAssetManager/AssetManager.WEB/obj
+/AssetManager.WEB/obj
+/UtilityFramework/obj
+/AssetManager.API.Tests/bin/Debug
+/AssetManager.API.Tests/obj
+/AssetManager.WEB.Tests/bin/Debug
+/AssetManager.WEB/bin/roslyn
+/AssetManager.API/bin/roslyn
+/AssetManager.API/obj
+Debug
+/.vs/config
+.vs/AngularSPA

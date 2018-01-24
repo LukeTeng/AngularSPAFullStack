@@ -1,0 +1,40 @@
+
+<div class="page-header">
+    <p>Class Cover</p>
+    <div class="sub-header">
+        <p>{{eventData?.createTime}}</p>
+    </div>
+    <button (click)="start()">Start Event</button>
+
+    <div class="main-content">
+
+        <div class="event-item" *ngIf="eventData?.eventId">
+            <p class="font-weight-bold">Booking Started</p>
+            <p>{{ eventData?.createTime }}</p>
+        </div>
+        <div class="event-item" *ngIf="sendInvFlag">
+            <p class="font-weight-bold">Send Invitation</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Request Sent</th>
+                        <th>Response Received</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let inv of eventData?.invitations">
+                        <td>{{ inv.name}}</td>
+                        <td>{{ inv.requestSentTime | date:'medium'}}</td>
+                        <td>{{ inv.responseTime | date:'medium'}}</td>
+                        <td>{{ getStatusString(inv.status) }}</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+</div>
+
