@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './components/app/app.component';
-import { NavMenuComponent } from './components/navmenu/navmenu.component';
+import { TopNavMenuComponent } from './components/navmenu/topnavmenu/topnavmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { BookEventComponent } from './components/event/bookevent/bookevent.component';
 import { HttpService } from './shared/services/http.service';
@@ -14,7 +14,7 @@ import { HttpService } from './shared/services/http.service';
 @NgModule({
     declarations: [
         AppComponent,
-        NavMenuComponent,
+        TopNavMenuComponent,
         HomeComponent,
         BookEventComponent
     ],
