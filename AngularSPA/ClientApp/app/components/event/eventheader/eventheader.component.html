@@ -1,0 +1,46 @@
+
+<div class="event-header">
+    <div class="row">
+            <div class="col-lg-9">
+                <div class="row">
+                    <p class="header-title padding-left15">{{eventHeader.createdTime}}</p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        &nbsp;<br />
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> &nbsp;{{ eventHeader.numberOfTeacher }} &nbsp; Teacher
+                    </div>
+                    <div class="col-sm-2">
+                        &nbsp;<br />
+                        <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> &nbsp;{{ eventHeader.startTime }}
+                    </div>
+                    <div class="col-sm-2">
+                        <span class="text-uppercase">Teacher Covered</span>
+                        <br />
+                        {{ eventHeader.teacherCovered }}
+                    </div>
+                    <div class="col-sm-2">
+                        <span class="text-uppercase">Class Covered</span>
+                        <br />
+                        {{ eventHeader.classCovered }}
+                    </div>
+                    <div class="col-sm-3">
+                        <span class="text-uppercase">Reason For Absense</span>
+                        <br />
+                        {{ eventHeader.reasonForAbsense }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="row">
+                    <p class="header-title float-right padding-right15">Booking in Progress</p>
+                </div>
+
+                <ngb-progressbar [showValue]="true" type="info" [value]="progressValue"></ngb-progressbar>
+            </div>
+
+        </div>
+    </div>
+
+

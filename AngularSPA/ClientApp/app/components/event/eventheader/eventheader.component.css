@@ -1,0 +1,24 @@
+
+
+.header-title
+{
+    font-size:large;
+    font-weight:bold;
+}
+
+.padding-left15{
+    padding-left: 15px;
+}
+
+.padding-right15 {
+    padding-right: 15px;
+}
+
+.float-right
+{
+    float: right !important;
+}
+
+div.progress-bar{
+    margin-left: -100px;
+}

@@ -49,7 +49,7 @@
                                 <td>{{ inv.name}}</td>
                                 <td>{{ inv.requestSentTime | date:'medium'}}</td>
                                 <td>{{ inv.responseTime | date:'medium'}}</td>
-                                <td>{{ getStatusString(inv.status) }}</td>
+                                <td> <span [ngClass]="getStatusString(inv.status)">{{ getStatusString(inv.status) }}</span></td>
                             </tr>
                         </tbody>
 

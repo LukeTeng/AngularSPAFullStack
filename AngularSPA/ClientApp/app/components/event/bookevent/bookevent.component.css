@@ -1,0 +1,51 @@
+
+
+.header-title {
+    font-size: large;
+    font-weight: bold;
+}
+
+.padding-left15 {
+    padding-left: 15px;
+}
+
+.padding-right15 {
+    padding-right: 15px;
+}
+
+.float-right {
+    float: right !important;
+}
+
+div.progress-bar {
+    margin-left: -100px;
+}
+
+
+div.main-content {
+    margin-top: 20px;
+}
+
+div.event-item {
+    margin-top: 40px;
+}
+
+div.padding-top40 {
+    margin-top: 30px;
+}
+
+
+.borderless.table > tbody > tr > td {
+    border: none !important;
+    padding: 0px !important;
+    border-top: none !important;
+}
+
+span.Confirmed{
+    background-color: lightgrey;
+}
+
+span.Declined {
+    background-color: lightcoral;
+}
+
