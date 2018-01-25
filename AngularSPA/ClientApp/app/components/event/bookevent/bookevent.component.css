@@ -41,11 +41,34 @@ div.padding-top40 {
     border-top: none !important;
 }
 
-span.Confirmed{
+span.Confirmed {
     background-color: lightgrey;
 }
 
 span.Declined {
     background-color: lightcoral;
 }
+
+/*
+.timeline {
+    position: relative;
+    margin: 10px 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: section;
+}
+
+
+.timeline {
+    content: '';
+    position: absolute;
+    top: -50px;
+    bottom: 0;
+    width: 2px;
+    background: #000;
+    left: -25px;
+    margin: 0;
+    border-radius: 2px;
+}
+*/
 
