@@ -39,7 +39,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\app\components\event\bookevent\event.d.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\event\event.d.ts" />
     <TypeScriptCompile Include="ClientApp\app\shared\services\http.service.ts" />
   </ItemGroup>
 

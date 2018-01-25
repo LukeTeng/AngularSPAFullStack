@@ -1,11 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../../../shared/services/http.service';
-import { EventData, Invitation, Status } from '../event.d';
+import { EventData, Invitation } from '../event.d';
+
+
+export enum Status {
+    Initial = 10,
+    Sending = 20,
+    Sent = 30,
+    Declined = 40,
+    Confirmed = 50,
+    Expired = 60,
+    Others = 100
+}
 
 
 @Component({
     selector: 'book-event',
-    templateUrl: './bookevent.component.html'
+    templateUrl: './bookevent.component.html',
+    styleUrls: ['./bookevent.component.css']
 })
 export class BookEventComponent {
 
@@ -24,7 +36,7 @@ export class BookEventComponent {
     }
 
     private async start() {
-        this.eventData = await this.getEventData();
+        await this.getEventData();
         if (this.eventData && this.eventData.eventId) {
             setTimeout(() => {
                 this.sendInvFlag = true;
@@ -37,16 +49,21 @@ export class BookEventComponent {
         }
     }
 
+    private cancel() {
+
+    }
+
 
     private async getEventData(): Promise<EventData> {
         const result = await this.httpService.post("/api/Events/Get", { eventId: 110 });
         //console.log('event data, ', result);
+        this.eventData = result;
         return result;
     }
 
     private async sendInvitation() {
         let unsentInv = this.getUnsentInv();
-        console.log('get unsend, ', unsentInv);
+        //console.log('get unsend, ', unsentInv);
         if (unsentInv) {
             await this.apiSendInvitation(unsentInv);
             //total try protection ?????????
@@ -67,7 +84,7 @@ export class BookEventComponent {
     private async apiSendInvitation(inv: Invitation): Promise<void>{
         const result = await this.httpService.post("/api/Events/SendInvitation", { eventId: this.eventData.eventId, invitationId: inv.id });
         this.resetInvitation(result);
-        console.log('event data, ', result, this.eventData);
+        //console.log('event data, ', result, this.eventData);
     }
 
     private resetInvitation(inv: Invitation) {

@@ -6,8 +6,6 @@ import { Component } from '@angular/core';
     styleUrls: ['./topnavmenu.component.css']
 })
 export class TopNavMenuComponent {
-
-
     private userData: any = {
         userAvatarLink: '/images/avatars/avatar1.png',
         userName: 'Frances Howell',

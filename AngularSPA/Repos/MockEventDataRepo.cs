@@ -147,11 +147,11 @@ namespace AngularSPA.MockRepo
                     // for test purpose only. just to show the changed response status
                     if(invitationId % 2 == 0)
                     {
-                        ChangeInvitationStatus(eventId, invitationId - 1, InvitationStatus.Confirmed);
+                        ChangeInvitationStatus(eventId, invitationId, InvitationStatus.Confirmed);
                     }
                     else
                     {
-                        ChangeInvitationStatus(eventId, invitationId - 1, InvitationStatus.Declined);
+                        ChangeInvitationStatus(eventId, invitationId, InvitationStatus.Declined);
                     }
 
                     return (true, target);
