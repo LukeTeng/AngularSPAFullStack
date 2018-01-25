@@ -1,19 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../../../shared/services/http.service';
-import { EventData, Invitation } from './event.d';
+import { EventData, Invitation, Status } from '../event.d';
 
-export enum Status {
-    Initial = 10,
-    Sending = 20,
-    Sent = 30,
-    Declined = 40,
-    Confirmed = 50,
-    Expired = 60,
-    Others = 100
-}
 
 @Component({
-    selector: 'counter',
+    selector: 'book-event',
     templateUrl: './bookevent.component.html'
 })
 export class BookEventComponent {

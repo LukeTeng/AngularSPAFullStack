@@ -12,7 +12,6 @@ export class TopNavMenuComponent {
         userAvatarLink: '/images/avatars/avatar1.png',
         userName: 'Frances Howell',
         school: 'Brisbane Catholic School'
-
     }
     
 }

@@ -8,6 +8,7 @@ import { AppComponent } from './components/app/app.component';
 import { TopNavMenuComponent } from './components/navmenu/topnavmenu/topnavmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { BookEventComponent } from './components/event/bookevent/bookevent.component';
+import { EventHeaderComponent } from './components/event/eventheader/eventheader.component';
 import { HttpService } from './shared/services/http.service';
 
 
@@ -16,7 +17,8 @@ import { HttpService } from './shared/services/http.service';
         AppComponent,
         TopNavMenuComponent,
         HomeComponent,
-        BookEventComponent
+        BookEventComponent,
+        EventHeaderComponent
     ],
     imports: [
         CommonModule,
